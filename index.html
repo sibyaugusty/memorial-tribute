@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Loving Memory - John & Maria Anderson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen active">
+        <div class="loading-text" id="loading-text"></div>
+    </div>
+
+    <!-- Main Website -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Mobile Header -->
+        <header class="header mobile-header" id="mobile-header">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            <h1 class="site-logo">In Loving Memory</h1>
+            <button class="btn-message" id="btn-message-mobile">Leave Message</button>
+        </header>
+
+        <!-- Desktop Header -->
+        <header class="header desktop-header" id="desktop-header">
+            <div class="header-container">
+                <h1 class="site-logo">In Loving Memory</h1>
+                <nav class="desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#family" class="nav-link">Family</a></li>
+                        <li><a href="#scripture" class="nav-link">Scripture</a></li>
+                        <li><a href="#messages" class="nav-link">Messages</a></li>
+                        <li><a href="#memories" class="nav-link">Memories</a></li>
+                        <li><a href="#comments" class="nav-link">Comments</a></li>
+                    </ul>
+                </nav>
+                <button class="btn-message" id="btn-message-desktop">Leave Message</button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#family" class="nav-link">Family</a></li>
+                <li><a href="#scripture" class="nav-link">Scripture</a></li>
+                <li><a href="#messages" class="nav-link">Messages</a></li>
+                <li><a href="#memories" class="nav-link">Memories</a></li>
+                <li><a href="#comments" class="nav-link">Comments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Page View -->
+        <main id="main-view" class="main-view">
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="container">
+                    <h2 class="hero-title">In Loving Memory</h2>
+                    <p class="hero-subtitle">Forever in our hearts</p>
+                </div>
+            </section>
+
+            <!-- Memorial Cards Section -->
+            <section class="memorial-section">
+                <div class="container">
+                    <div class="memorial-cards">
+                        <!-- Father Card -->
+                        <div class="memorial-card fade-in-up">
+                            <div class="card-image">
+                                <div class="image-placeholder father-img">
+                                    <span>JMA</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-name">John Michael Anderson</h3>
+                                <p class="card-dates">March 15, 1945 - October 12, 2024</p>
+                                <p class="card-quote">"A gentle soul who taught us the meaning of unconditional love."</p>
+                            </div>
+                        </div>
+
+                        <!-- Mother Card -->
+                        <div class="memorial-card fade-in-up">
+                            <div class="card-image">
+                                <div class="image-placeholder mother-img">
+                                    <span>MGA</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-name">Maria Grace Anderson</h3>
+                                <p class="card-dates">June 22, 1948 - November 8, 2024</p>
+                                <p class="card-quote">"Her kindness touched every heart, her love knew no bounds."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Family Section -->
+            <section id="family" class="family-section">
+                <div class="container">
+                    <div class="section-content fade-in-up">
+                        <h2 class="section-title">A Family's Love</h2>
+                        <div class="family-message">
+                            <p>Our beloved parents were the pillars of our family, teaching us through their actions what it means to live with grace, compassion, and unwavering faith. Their love created a home filled with warmth and laughter, where every child felt cherished. Though they have departed from this earthly realm, their legacy lives on in each of us—in the values they instilled, the memories we hold dear, and the love that continues to bind our family together. They showed us that love transcends all boundaries, even death itself.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Scripture Section -->
+            <section id="scripture" class="scripture-section">
+                <div class="container">
+                    <h2 class="section-title fade-in-up">Sacred Words</h2>
+                    <div class="scripture-slider fade-in-up">
+                        <div class="scripture-slide active">
+                            <blockquote class="scripture-quote">
+                                <p>"I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live."</p>
+                                <cite>— John 11:25</cite>
+                            </blockquote>
+                        </div>
+                        <div class="scripture-slide">
+                            <blockquote class="scripture-quote">
+                                <p>"The Lord is my shepherd; I shall not want. He makes me lie down in green pastures. He leads me beside still waters."</p>
+                                <cite>— Psalm 23:1-2</cite>
+                            </blockquote>
+                        </div>
+                        <div class="scripture-slide">
+                            <blockquote class="scripture-quote">
+                                <p>"For God so loved the world that he gave his only Son, that whoever believes in him should not perish but have eternal life."</p>
+                                <cite>— John 3:16</cite>
+                            </blockquote>
+                        </div>
+                        <div class="scripture-slide">
+                            <blockquote class="scripture-quote">
+                                <p>"Blessed are those who mourn, for they shall be comforted."</p>
+                                <cite>— Matthew 5:4</cite>
+                            </blockquote>
+                        </div>
+                        <div class="scripture-slide">
+                            <blockquote class="scripture-quote">
+                                <p>"He will wipe away every tear from their eyes, and death shall be no more, neither shall there be mourning, nor crying, nor pain anymore."</p>
+                                <cite>— Revelation 21:4</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section id="messages" class="messages-section">
+                <div class="container">
+                    <h2 class="section-title fade-in-up">Messages from Our Parents</h2>
+                    <div class="messages-grid">
+                        <!-- Father's Message -->
+                        <div class="message-card fade-in-up">
+                            <h3 class="message-title">From Our Father</h3>
+                            <div class="message-content">
+                                <p>Life is a precious gift, meant to be lived with purpose and filled with love. Cherish every moment, for time moves swiftly. Hold your family close, forgive freely, and always choose kindness. Remember that our time on earth is but a brief journey toward our eternal home. Live each day with faith, knowing that love never truly ends—it merely transforms.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mother's Message -->
+                        <div class="message-card fade-in-up">
+                            <h3 class="message-title">From Our Mother</h3>
+                            <div class="message-content">
+                                <p>My dear ones, as you walk through life, remember to find beauty in the smallest moments. A sunrise, a kind word, a gentle touch—these are the treasures that matter most. Love deeply, laugh often, and never lose faith in God's plan. Though we may part in body, our spirits remain forever connected by the unbreakable bonds of love. Until we meet again in heaven, carry our love in your hearts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Memories Preview Section -->
+            <section id="memories" class="memories-section">
+                <div class="container">
+                    <h2 class="section-title fade-in-up">Treasured Memories</h2>
+                    <div class="gallery-preview fade-in-up">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <div class="gallery-placeholder">
+                                    <span>Family gathering 2020</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-placeholder">
+                                    <span>50th Anniversary</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-placeholder">
+                                    <span>Holiday celebration</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-placeholder">
+                                    <span>Summer vacation</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-placeholder">
+                                    <span>Garden moments</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-placeholder">
+                                    <span>Together forever</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-view-all" id="btn-view-all">View All Memories</button>
+                </div>
+            </section>
+
+            <!-- Comments Section -->
+            <section id="comments" class="comments-section">
+                <div class="container">
+                    <h2 class="section-title fade-in-up">Messages of Love & Remembrance</h2>
+                    <div id="comments-list" class="comments-list">
+                        <!-- Comments will be dynamically inserted here -->
+                    </div>
+                    <button class="btn-view-all-comments hidden" id="btn-view-all-comments">View All Comments</button>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <p>Forever in our hearts • In loving memory of John & Maria Anderson</p>
+                </div>
+            </footer>
+        </main>
+
+        <!-- Gallery View -->
+        <div id="gallery-view" class="gallery-view hidden">
+            <header class="gallery-header">
+                <button class="btn-back" id="btn-back">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back
+                </button>
+                <h2>Treasured Memories</h2>
+            </header>
+            <div class="gallery-full">
+                <div class="container">
+                    <div class="gallery-grid-full">
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 1</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 2</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 3</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 4</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 5</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 6</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 7</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 8</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 9</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 10</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 11</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 12</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 13</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 14</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 15</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 16</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 17</span></div></div>
+                        <div class="gallery-item"><div class="gallery-placeholder"><span>Photo 18</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment Modal -->
+        <div id="comment-modal" class="modal">
+            <div class="modal-backdrop" id="modal-backdrop"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modal-close" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <h3 class="modal-title">Leave a Message</h3>
+                <p class="modal-subtitle">Share your thoughts and memories</p>
+                <form id="comment-form" class="comment-form">
+                    <div class="form-group">
+                        <label for="visitor-name">Your Name</label>
+                        <input type="text" id="visitor-name" name="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="visitor-message">Your Message</label>
+                        <textarea id="visitor-message" name="message" rows="5" required placeholder="Share your memories and thoughts..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Message</button>
+                </form>
+                <div id="form-success" class="form-success hidden">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h4>Thank You</h4>
+                    <p>Your message has been shared with the family.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="lightbox-content" id="lightbox-content"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
