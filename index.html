@@ -19,11 +19,10 @@
     <div id="main-content" class="main-content hidden">
         <!-- Mobile Header -->
         <header class="header mobile-header" id="mobile-header">
+            <h1 class="site-logo">In Loving Memory</h1>
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
                 <span class="hamburger"></span>
             </button>
-            <h1 class="site-logo">In Loving Memory</h1>
-            <button class="btn-message" id="btn-message-mobile">Leave Message</button>
         </header>
 
         <!-- Desktop Header -->
@@ -40,7 +39,6 @@
                         <li><a href="#comments" class="nav-link">Comments</a></li>
                     </ul>
                 </nav>
-                <button class="btn-message" id="btn-message-desktop">Leave Message</button>
             </div>
         </header>
 
@@ -55,6 +53,14 @@
                 <li><a href="#comments" class="nav-link">Comments</a></li>
             </ul>
         </nav>
+
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+        </button>
 
         <!-- Main Page View -->
         <main id="main-view" class="main-view">
@@ -222,6 +228,7 @@
             <section id="comments" class="comments-section">
                 <div class="container">
                     <h2 class="section-title fade-in-up">Messages of Love & Remembrance</h2>
+                    <button class="btn-message btn-leave-message" id="btn-message-comments">Leave a Message</button>
                     <div id="comments-list" class="comments-list">
                         <!-- Comments will be dynamically inserted here -->
                     </div>

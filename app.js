@@ -1,3 +1,29 @@
+// Responsive Font Size Function
+function setResponsiveFontSize() {
+    const width = window.innerWidth;
+    let baseFontSize;
+    
+    if (width < 360) {
+        baseFontSize = 14;
+    } else if (width < 480) {
+        baseFontSize = 15;
+    } else if (width < 768) {
+        baseFontSize = 16;
+    } else if (width < 1024) {
+        baseFontSize = 17;
+    } else if (width < 1440) {
+        baseFontSize = 18;
+    } else {
+        baseFontSize = 19;
+    }
+    
+    document.documentElement.style.fontSize = baseFontSize + 'px';
+}
+
+// Initialize responsive font size
+setResponsiveFontSize();
+window.addEventListener('resize', setResponsiveFontSize);
+
 // Loading Animation
 const loadingScreen = document.getElementById('loading-screen');
 const loadingText = document.getElementById('loading-text');
@@ -70,6 +96,26 @@ navLinks.forEach(link => {
     });
 });
 
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+function handleScrollToTopButton() {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+    } else {
+        scrollToTopBtn.classList.remove('visible');
+    }
+}
+
+window.addEventListener('scroll', handleScrollToTopButton);
+
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 // Scripture Slider
 const scriptureSlides = document.querySelectorAll('.scripture-slide');
 let currentSlide = 0;
@@ -113,6 +159,7 @@ btnViewAll.addEventListener('click', () => {
     mainView.classList.add('hidden');
     if (mobileHeader) mobileHeader.style.display = 'none';
     if (desktopHeader) desktopHeader.style.display = 'none';
+    scrollToTopBtn.style.display = 'none';
     galleryView.classList.remove('hidden');
     setTimeout(() => {
         galleryView.classList.add('visible');
@@ -129,14 +176,14 @@ btnBack.addEventListener('click', () => {
         } else {
             if (mobileHeader) mobileHeader.style.display = 'flex';
         }
+        scrollToTopBtn.style.display = 'flex';
         mainView.classList.remove('hidden');
     }, 400);
     window.scrollTo(0, 0);
 });
 
 // Comment Modal
-const btnMessageMobile = document.getElementById('btn-message-mobile');
-const btnMessageDesktop = document.getElementById('btn-message-desktop');
+const btnMessageComments = document.getElementById('btn-message-comments');
 const commentModal = document.getElementById('comment-modal');
 const modalBackdrop = document.getElementById('modal-backdrop');
 const modalClose = document.getElementById('modal-close');
@@ -158,12 +205,8 @@ function closeModal() {
     }, 300);
 }
 
-if (btnMessageMobile) {
-    btnMessageMobile.addEventListener('click', openModal);
-}
-
-if (btnMessageDesktop) {
-    btnMessageDesktop.addEventListener('click', openModal);
+if (btnMessageComments) {
+    btnMessageComments.addEventListener('click', openModal);
 }
 
 modalClose.addEventListener('click', closeModal);
