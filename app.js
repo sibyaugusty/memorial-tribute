@@ -2,7 +2,7 @@
 function setResponsiveFontSize() {
     const width = window.innerWidth;
     let baseFontSize;
-    
+
     if (width < 360) {
         baseFontSize = 14;
     } else if (width < 480) {
@@ -16,7 +16,7 @@ function setResponsiveFontSize() {
     } else {
         baseFontSize = 19;
     }
-    
+
     document.documentElement.style.fontSize = baseFontSize + 'px';
 }
 
@@ -78,9 +78,9 @@ navLinks.forEach(link => {
 // Smooth Scrolling for Navigation Links
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
         const targetId = link.getAttribute('href');
         if (targetId.startsWith('#')) {
+            e.preventDefault();
             const targetSection = document.querySelector(targetId);
             if (targetSection) {
                 const headerOffset = window.innerWidth >= 768 ? 100 : 80;
@@ -219,7 +219,7 @@ let comments = JSON.parse(localStorage.getItem('memorialComments')) || [];
 function displayComments() {
     const commentsList = document.getElementById('comments-list');
     const btnViewAllComments = document.getElementById('btn-view-all-comments');
-    
+
     if (comments.length === 0) {
         commentsList.innerHTML = '<p style="text-align: center; color: var(--text-light); font-size: 1.125rem;">No messages yet. Be the first to share your memories.</p>';
         btnViewAllComments.classList.add('hidden');
@@ -227,13 +227,13 @@ function displayComments() {
     }
 
     commentsList.innerHTML = '';
-    
+
     comments.forEach((comment, index) => {
         const commentItem = document.createElement('div');
         commentItem.className = 'comment-item fade-in-up';
-        
+
         const initials = comment.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
-        
+
         commentItem.innerHTML = `
             <div class="comment-header">
                 <div class="comment-avatar">${initials}</div>
@@ -244,7 +244,7 @@ function displayComments() {
             </div>
             <p class="comment-text">${comment.message}</p>
         `;
-        
+
         commentsList.appendChild(commentItem);
     });
 
@@ -268,7 +268,7 @@ let commentsExpanded = false;
 btnViewAllComments.addEventListener('click', () => {
     const commentsList = document.getElementById('comments-list');
     commentsExpanded = !commentsExpanded;
-    
+
     if (commentsExpanded) {
         commentsList.classList.remove('collapsed');
         btnViewAllComments.textContent = 'Show Less';
@@ -298,10 +298,10 @@ commentForm.addEventListener('submit', (e) => {
     const newComment = {
         name: name,
         message: message,
-        date: new Date().toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+        date: new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
         })
     };
 
